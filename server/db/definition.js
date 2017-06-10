@@ -33,28 +33,28 @@ User.hasMany(Note, {as: 'notes'})
 //     lastName: 'Yi'
 //   })
 // })
-// User.sync().then(() => {
-//   return User.create({
-//     username: 'jyi1991',
-//     password: '123',
-//     firstName: 'Jonathan',
-//     lastName: 'Yi'
-//     })
-// })
+User.sync().then(() => {
+  return User.create({
+    username: 'jyi1991',
+    password: '123',
+    firstName: 'Jonathan',
+    lastName: 'Yi'
+    })
+})
 
-// Note.sync().then(() => {
-//   return Note.create({
-//           text: 'helloWorld',
-//           isComplete: false,
-//           userId: 1
-//         })
-// }).then(() => {
-//     return Note.create({
-//           text: 'goodbye world',
-//           isComplete: false,
-//           userId: 1
-//         })
-// })
+Note.sync().then(() => {
+  return Note.create({
+          text: 'helloWorld',
+          isComplete: false,
+          userId: 1
+        })
+}).then(() => {
+    return Note.create({
+          text: 'goodbye world',
+          isComplete: false,
+          userId: 1
+        })
+})
 
 User.sync()
 Note.sync()

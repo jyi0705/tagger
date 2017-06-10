@@ -17,10 +17,11 @@ var app = express()
 
 // hook any middleware you need to into the express instance, including your route handlers
 // hint: use the bodyParser middleware to parse the request body for POST & PUT requests.
-app.use(express.static(__dirname + '/public'))
+app.use('/home', routes)
+app.use('/home', express.static(path.join(__dirname, '../public')))
 app.use(morgan('dev'))
 app.use(bodyParser.json())
-app.use('/home', routes)
+
 // serve the `../public/` folder using the express.static() middleware function
 // (you will want to use the path library to correctly resolve the path to ../public.)
 
@@ -29,7 +30,3 @@ const port = 5050
 app.set('port', port)
 app.listen(app.get('port'))
 console.log('Listening on', app.get('port'))
-
-app.get('/home', function(req, res) {
-  res.sendFile(path.join( __dirname, '../public', 'index.html' ));
-});
