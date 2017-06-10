@@ -34,7 +34,7 @@ Good luck!
 - Sqlite3
 - Front-end framework of your choice
 - ORM of your choice (Be sure to `npm install` it!)
-- Any CSS libraries you wish to use
+- Any CSS libraries you wish to use                                                                                                         
 
 ### Existing helpful commands:
 
@@ -42,6 +42,7 @@ Good luck!
 `npm run dev` — REACT ONLY: start webpack watch process for transpilation  
 `npm run build` — REACT ONLY: run webpack once to create `public/react/build.js`  
 `npm run drop` — remove the `server/db/tagger.sqlite` database file (drops the database)  
+"drop-db": "rm server/db/tagger.sqlite"                                                                                                                                                                                                                                                                                 
 NOTE: The above command assumes that you name your database file `tagger.sqlite` within the `server/db/` directory.
 
 ### Angular Setup
